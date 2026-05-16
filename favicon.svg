@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="100%" height="100%">
+  <defs>
+    <!-- Modern tech gradient for high visibility on dark/light tabs -->
+    <linearGradient id="hireiq-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5" /> <!-- Indigo 600 -->
+      <stop offset="100%" stop-color="#06B6D4" /> <!-- Cyan 500 -->
+    </linearGradient>
+  </defs>
+
+  <!-- Smooth rounded background grid icon -->
+  <rect width="32" height="32" rx="7" fill="url(#hireiq-grad)" />
+
+  <!-- Left Pillar of the 'H' -->
+  <rect x="8" y="8" width="4" height="16" rx="1.5" fill="#FFFFFF" />
+
+  <!-- Right Pillar of the 'H' (offset slightly lower to balance the IQ node) -->
+  <rect x="20" y="12" width="4" height="12" rx="1.5" fill="#FFFFFF" />
+
+  <!-- Upward-sloping Crossbar (The Checkmark/Success angle) -->
+  <path d="M11.5 17.5 L20.5 14.5" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" />
+
+  <!-- The 'IQ' Intelligence Node -->
+  <circle cx="22" cy="7.5" r="2.5" fill="#67E8F9" /> <!-- Bright Cyan Spark -->
+</svg>
