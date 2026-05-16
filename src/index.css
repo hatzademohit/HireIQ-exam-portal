@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #0A0F1E;
+    color: #F9FAFB;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: #374151 transparent;
+  }
+  .scrollbar-thin::-webkit-scrollbar { width: 4px; }
+  .scrollbar-thin::-webkit-scrollbar-track { background: transparent; }
+  .scrollbar-thin::-webkit-scrollbar-thumb { background-color: #374151; border-radius: 2px; }
+}
+
+@keyframes pulse-ring {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(59,130,246,0.7), 0 0 0 8px rgba(59,130,246,0.3); }
+  50% { box-shadow: 0 0 0 8px rgba(59,130,246,0.5), 0 0 0 16px rgba(59,130,246,0.1); }
+}
+
+@keyframes waveform {
+  0%, 100% { transform: scaleY(0.3); }
+  50% { transform: scaleY(1); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes blink-cursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes ring-progress {
+  from { stroke-dashoffset: 283; }
+  to { stroke-dashoffset: 62; }
+}
+
+@keyframes check-draw {
+  to { stroke-dashoffset: 0; }
+}
+
+.animate-pulse-ring { animation: pulse-ring 2s ease-in-out infinite; }
+.animate-waveform-1 { animation: waveform 0.8s ease-in-out infinite; }
+.animate-waveform-2 { animation: waveform 0.8s ease-in-out infinite 0.1s; }
+.animate-waveform-3 { animation: waveform 0.8s ease-in-out infinite 0.2s; }
+.animate-waveform-4 { animation: waveform 0.8s ease-in-out infinite 0.3s; }
+.animate-waveform-5 { animation: waveform 0.8s ease-in-out infinite 0.4s; }
+.animate-waveform-6 { animation: waveform 0.8s ease-in-out infinite 0.5s; }
+.animate-waveform-7 { animation: waveform 0.8s ease-in-out infinite 0.6s; }
+.animate-fade-in { animation: fade-in 0.5s ease-out forwards; }
+.animate-cursor { animation: blink-cursor 1s step-end infinite; }
+.animate-ring-progress {
+  animation: ring-progress 1.5s ease-out forwards;
+  stroke-dasharray: 283;
+  stroke-dashoffset: 283;
+}
+.animate-check-draw {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: check-draw 0.6s ease-out 0.4s forwards;
+}
